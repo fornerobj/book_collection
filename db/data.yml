@@ -1,0 +1,26 @@
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - 2024-01-23 19:45:05.728435000 Z
+    - 2024-01-23 19:45:05.728435000 Z
+
+---
+books:
+  columns:
+  - id
+  - title
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - The Lion, The Witch, and The Wardrobe
+    - 2024-01-23 19:52:12.174427000 Z
+    - 2024-01-23 19:52:12.174427000 Z

@@ -1,0 +1,8 @@
+<p style="color: green"><%= notice %></p>
+<%= link_to "Back to list", books_path %>
+<%= render @book %>
+
+<div class="actions">
+  <%= link_to("Edit", edit_book_path(@book)) %>
+  <%= link_to("Delete", delete_book_path(@book))%>
+</div>
