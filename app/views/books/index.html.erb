@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Books</h1> <%= link_to "New book", new_book_path %><br><br>
+<% i = 1 %>
+<div id="books">
+  <% @books.each do |book| %>
+    <%=i%>. <%= render book %>
+    <% i = i + 1 %>
+    <p>
+      <%= link_to "Show this book | ", book %> <%= link_to(" Edit | ", edit_book_path(book)) %> <%= link_to(" Delete", delete_book_path(book))%>
+    </p>
+    <br>
+  <% end %>
+</div>
+
