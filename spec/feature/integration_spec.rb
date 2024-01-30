@@ -7,7 +7,7 @@ RSpec.describe 'Creating a book', type: :feature do
     fill_in "book[title]", with: 'harry potter'
     fill_in "book[author]", with: 'doesnt matter'
     fill_in "book[price]", with: '10.00'
-    fill_in 'book[publish_date]', with: DateTime.current.strftime("%m%d%Y")
+    fill_in 'book[publish_date]', with: "1990-12-31"
     click_on 'Create Book'
     visit books_path
     expect(page).to have_content('harry potter')
@@ -18,7 +18,7 @@ RSpec.describe 'Creating a book', type: :feature do
     fill_in "book[title]", with: ''
     fill_in "book[author]", with: 'doesnt matter'
     fill_in "book[price]", with: '10.00'
-    fill_in 'book[publish_date]', with: DateTime.current.strftime("%m%d%Y")
+    fill_in 'book[publish_date]', with: "1990-12-31"
     click_on 'Create Book'
     expect(page).to have_content("Title can't be blank")
   end
@@ -28,7 +28,7 @@ RSpec.describe 'Creating a book', type: :feature do
     fill_in "book[title]", with: 'Harry Potter'
     fill_in "book[author]", with: ''
     fill_in "book[price]", with: '10.00'
-    fill_in 'book[publish_date]', with: DateTime.current.strftime("%m%d%Y")
+    fill_in 'book[publish_date]', with: '1990-12-31'
     click_on 'Create Book'
     expect(page).to have_content("Author can't be blank")
   end
@@ -38,7 +38,7 @@ RSpec.describe 'Creating a book', type: :feature do
     fill_in "book[title]", with: 'Harry Potter'
     fill_in "book[author]", with: 'doesnt matter'
     fill_in "book[price]", with: ''
-    fill_in 'book[publish_date]', with: DateTime.current.strftime("%m%d%Y")
+    fill_in 'book[publish_date]', with: '1990-12-31'
     click_on 'Create Book'
     expect(page).to have_content("Price can't be blank")
   end
@@ -49,6 +49,6 @@ RSpec.describe 'Creating a book', type: :feature do
     fill_in "book[author]", with: 'doesnt matter'
     fill_in "book[price]", with: '10.00'
     click_on 'Create Book'
-    expect(page).to have_content("Publish_date can't be blank")
+    expect(page).to have_content("Publish date can't be blank")
   end
 end
